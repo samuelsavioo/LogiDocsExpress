@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogiDocs Express</title>
+    <link rel="stylesheet" href="estilo.css">
+
+</head>
+<body>
+    <main>
+        <h1>Remessa</h1> <form name="logiExpress" id="logiExpress">
+            <fieldset>
+                <legend><b>Dados da Remessa</b></legend>
+                
+                <div>
+                    <label for="servico">Serviço:</label>
+                    <select name="servico" id="servico" required>
+                        <option value="" disabled selected>Selecione um Serviço</option>
+                        <option value="malote">Envio de malote físico</option>
+                        <option value="protocolo">Protocolo de documentos</option>
+                        <option value="cheques">Processamento de cheques</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="dataPostagem">Data Postagem:</label>
+                    <input type="date" name="dataPostagem" id="dataPostagem" required>
+                </div>
+
+                <div>
+                    <label for="quantidade">Quantidade:</label>
+                    <input type="number" id="quantidade" name="quantidade" min="1" max="100" required>
+                </div>
+
+                <div>
+                    <label for="job">JOB:</label>
+                    <input type="number" id="job" name="job" max="9999" required>
+                </div>
+
+                <div>
+                    <label for="ocr">Nº Recibo, OCR ou Remessa:</label>
+                    <input type="text" id="ocr" name="ocr" maxlength="9" required>
+                </div>
+
+                <div>
+                    <label for="dataLancamento">Data Lançamento:</label>
+                    <input type="text" name="dataLancamento" id="dataLancamento" value="04/09/2025" readonly>
+                </div>
+
+                <div>
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                    <button type="reset" class="btn btn-secondary">Cancelar</button>
+                </div>
+
+            </fieldset>
+        </form>
+    </main>
+    
+        <script src="estilo.js"></script>
+</body>
+</html>
